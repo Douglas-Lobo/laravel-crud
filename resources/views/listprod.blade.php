@@ -26,8 +26,8 @@
                             <td>{{ $prod->produtoID }}</td>
                             <td>{{ $prod->nomeproduto }}</td>
                             <td>{{ $prod->descricao }}</td>
-                            <td>{{ $prod->categoria }}</td>
-                            <td>{{ $prod->fornecedor }}</td>
+                            <td>{{ $prod->categoria->nomecategoria }}</td>
+                            <td>{{ $prod->fornecedor->nomefornecedor }} {{ $prod->fornecedor->estado->nome}}</td>
                             <td><img width="100" height='100' src="{{ asset($prod->imagemgrande) }}" alt="{{ $prod->nomeproduto }}" ></td>
                             <td>{{ $prod->precounitario }}</td>
                             <td>

@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Produto extends Model
 {
     protected $primaryKey = 'produtoID';
+    protected $fillable = [
+        'nomeproduto',  
+        'descricao',  
+        'precounitario',
+        'precorevenda', 
+        'estoque',      
+        'fornecedorID',
+        'categoriaID',  
+        'codigobarra'  
+    ];
 
     public function fornecedor()
     {
@@ -21,3 +31,6 @@ class Produto extends Model
 
    
 }
+
+
+

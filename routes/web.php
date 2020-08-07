@@ -13,12 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "PINTO";
+
+//ROTAS DO CRUD DE PRODUTOS
+route::prefix('admin')->namespace('Admin')->name('admin.produtos.')->group(function(){
+    
+    Route::get('/produtos', 'produtosController@listar')->name('index');
+    Route::get('/produtos/create', 'produtosController@create')->name('create');
+    Route::post('/produtos/create', 'produtosController@store')->name('store');
+    
+
 });
-
-Route::get('/', 'indexController@index')->name('index');
-
-
-Route::get('/produtos', 'produtosController@listar')->name('listar');
-

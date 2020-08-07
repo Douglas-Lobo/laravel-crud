@@ -3,9 +3,8 @@
 
 @section('conteudo')
 
-
-<div class='container'>
-        
+        <h3>Produtos</h3>
+        <a href="{{ route('admin.produtos.create') }}" class="btn waves-effect waves-light">Criar Prod</a>
         <div class='row' >
                 <table class='highlight'>
                     <thead>
@@ -27,7 +26,7 @@
                             <td>{{ $prod->nomeproduto }}</td>
                             <td>{{ $prod->descricao }}</td>
                             <td>{{ $prod->categoria->nomecategoria }}</td>
-                            <td>{{ $prod->fornecedor->nomefornecedor }} {{ $prod->fornecedor->estado->nome}}</td>
+                            <td>{{ $prod->fornecedor->nomefornecedor }}</td>
                             <td><img width="100" height='100' src="{{ asset($prod->imagemgrande) }}" alt="{{ $prod->nomeproduto }}" ></td>
                             <td>{{ $prod->precounitario }}</td>
                             <td>
@@ -42,7 +41,5 @@
             </div>
 
             {{ $produtos->links() }}
-
-    </div>
 
 @endsection
